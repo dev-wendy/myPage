@@ -6,12 +6,15 @@ module.exports = function(app) {
          extended: true
       }));
      
-     app.get('/',function(req,res){
-        res.render('index.html')
+     app.get('/',function(req,res){ // app.get('/') url 주소 == / 
+        res.render('index.html') // 웹브라우저에 입력되면 'index.html' 실행
      });
      app.get('/about',function(req,res){
         res.render('about.html');
     });
+    app.get('/gohome',function(req,res){
+      res.render('gohome.html');
+  });
      
     app.get('/listall', function (req, res) {
       //res.render('about.html');
